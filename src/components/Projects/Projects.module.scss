@@ -1,0 +1,12 @@
+/* Index Page Projects module styles
+========================================================================== */
+
+.indexTitleBlock {
+  grid-column: 2 / 6;
+  padding-top: 2rem;
+}
+
+.indexContentBlock {
+  grid-column: 7 / -2;
+  padding: 4rem 0;
+}

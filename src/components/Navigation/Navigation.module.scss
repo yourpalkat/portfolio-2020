@@ -1,0 +1,29 @@
+/* Main Navigation styles 
+  =================================================== */
+
+.mainNav {
+  grid-column: 7 / -2;
+}
+.mainNav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+.mainNav li {
+  margin-inline-end: 4rem;
+}
+.mainNav a {
+  color: #666;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  letter-spacing: -0.025rem;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.3s ease, color 0.3s ease;
+}
+.mainNav a:hover,
+.mainNav a:focus {
+  color: black;
+  text-decoration-color: black;
+}

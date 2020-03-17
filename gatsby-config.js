@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Derek Murr – Front-end web developer`,
+    title: `Derek Murr`,
     description: `Portfolio site and blog of Derek Murr, a front-end web developer based in Toronto, Canada.`,
     author: `Derek Murr`,
   },
@@ -17,10 +17,7 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
       options: {
         data: `
-            @import './src/styles/normalize.scss';
-            @import './src/styles/typography.scss';
             @import './src/styles/variables.scss';
-            @import './src/styles/global.scss';
           `,
         includePaths: ['./src/styles/']
       }

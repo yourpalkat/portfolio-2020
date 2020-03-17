@@ -6,6 +6,10 @@ import Splash from '../components/Splash/Splash';
 import Projects from '../components/Projects/Projects';
 import Writing from '../components/Writing/Writing';
 
+import '../styles/normalize.scss';
+import '../styles/typography.scss';
+import '../styles/global.scss';
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />

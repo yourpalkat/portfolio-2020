@@ -38,3 +38,11 @@ ol {
   clip: rect(00 0 0);
   overflow: hidden;
 }
+
+.gridWrapper {
+  display: grid;
+  grid-template-columns: 4% repeat(12, 1fr) 4%;
+  grid-gap: 2.4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
