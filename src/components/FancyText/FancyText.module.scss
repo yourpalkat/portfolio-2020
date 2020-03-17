@@ -1,0 +1,29 @@
+/* FancyText headline module styles
+========================================================================== */
+
+.fancyTitle {
+  font-family: $font-heading;
+  margin-left: -1rem;
+  margin-top: 0;
+  font-size: 15vw;
+  color: rgba(33, 95, 107, 0.7);
+  letter-spacing: -0.25em;
+  line-height: 0.75;
+  word-break: break-all;
+  word-spacing: 0.35em;
+}
+.fancyTitle span:nth-of-type(2n + 3) {
+  color: rgba(160, 75, 73, 0.7);
+}
+.fancyTitle span:nth-of-type(3n + 2) {
+  color: rgba(79, 139, 93, 0.7);
+}
+.fancyTitle span:nth-of-type(5n + 3) {
+  color: rgba(130, 116, 71, 0.7);
+}
+
+@media (min-width: 1200px) {
+  .fancyTitle {
+    font-size: 17.9rem;
+  }
+}

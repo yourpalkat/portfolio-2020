@@ -10,7 +10,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/assets`,
+        path: `${__dirname}/src/assets/images/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
       },
     },
     {
@@ -21,6 +28,18 @@ module.exports = {
           `,
         includePaths: ['./src/styles/']
       }
+    },
+    {
+      resolve: `gatsby-plugin-web-font-loader`,
+      options: {
+        google: {
+          families: [`Ultra`, `Roboto`],
+        },
+        // custom: {
+        //   families: [`Ultra, Roboto`],
+        //   urls: [`/fonts/fonts.css`],
+        // },
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

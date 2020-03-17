@@ -1,4 +1,5 @@
 import React from 'react';
+import FancyText from '../FancyText/FancyText';
 
 import SplashStyles from './Splash.module.scss';
 
@@ -7,7 +8,7 @@ const Splash = () => {
     <section id="splash">
       <div className="gridWrapper">
         <div className={SplashStyles.indexTitleBlock}>
-          <h2 className="fancyTitle">front end web dev</h2>
+          <FancyText text="front end web dev" />
         </div>
         <div className={SplashStyles.indexContentBlock}>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In modi, explicabo exercitationem, deleniti soluta quaerat debitis enim voluptate ratione eveniet amet maiores voluptatibus doloremque laudantium illo accusantium saepe a autem!</p>
