@@ -14,7 +14,7 @@ const ProjectCard = ({ project }) => {
           source={project.shortDescription.shortDescription}
           escapeHtml={false}
         />
-        <Link to={project.slug}>Read more...</Link>
+        <Link to={`/project/${project.slug}`}>Read more...</Link>
         {project.externalUrl && <p><a href={project.externalUrl}>See it here!</a></p> }
       </div>
     </div>
