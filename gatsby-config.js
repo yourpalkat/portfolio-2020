@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 module.exports = {
   siteMetadata: {
     title: `Derek Murr`,
@@ -33,7 +35,7 @@ module.exports = {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
         google: {
-          families: [`Ultra`, `Roboto`],
+          families: [`Ultra`, `Roboto`, `Roboto bold`],
         },
         // custom: {
         //   families: [`Ultra, Roboto`],
@@ -41,8 +43,16 @@ module.exports = {
         // },
       },
     },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

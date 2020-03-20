@@ -1,5 +1,8 @@
 /* Index Page Projects module styles
 ========================================================================== */
+section {
+  scroll-margin-top: 8rem;
+}
 
 .indexTitleBlock {
   grid-column: 2 / 6;
@@ -10,3 +13,8 @@
   grid-column: 7 / -2;
   padding: 4rem 0;
 }
+
+.projectCardSection {
+  margin-top: 3.6rem;
+}
+
