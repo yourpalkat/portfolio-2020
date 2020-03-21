@@ -1,14 +1,22 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 import navStyles from './Navigation.module.scss';
 
-const Navigation = () => {
+const Navigation = ({ homePage }) => {
   return (
     <nav className={navStyles.mainNav}>
-      <ul>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#writing">Writing</a></li>
-      </ul>
+      {homePage ? (
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#writing">Writing</a></li>
+        </ul>
+      ) : (
+        <ul>
+          <li><Link to='/projects'>Projects</Link></li>
+          <li><Link to='/writing'>Writing</Link></li>
+        </ul>
+      )}
     </nav>
   );
 }

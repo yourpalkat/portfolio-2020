@@ -10,7 +10,7 @@ import WritingStyles from '../components/ProjectSection/ProjectSection.module.sc
 const WritingPage = () => {
   const { writing } = useStaticQuery(graphql`
     query {
-      writing: allContentfulBlogPost {
+      writing: allContentfulBlogPost(sort: {fields: publishedDate, order: DESC}) {
         edges {
           node {
             title
@@ -35,7 +35,7 @@ const WritingPage = () => {
           </div>
           <div className={WritingStyles.indexContentBlock}>
             <h3>Writing</h3>
-            <p>Well, you asked for it. These are all the projects and experiments I have to show right now!</p>
+            <p>I do not write as often as I should, but I am working to remedy that! Here are all the posts in the archive.</p>
             <div className={WritingStyles.projectCardSection}>
               {writing.edges.map(post => <PostCard post={post.node} key={post.node.contentful_id} />)}
             </div>

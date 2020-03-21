@@ -10,7 +10,7 @@ import ProjectStyles from '../components/ProjectSection/ProjectSection.module.sc
 const IndexPage = () => {
   const { projects } = useStaticQuery(graphql`
     query {
-      projects: allContentfulProject {
+      projects: allContentfulProject(sort: {fields: publishedDate, order: DESC}) {
         edges {
           node {
             title

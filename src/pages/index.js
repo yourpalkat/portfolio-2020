@@ -12,7 +12,7 @@ import '../styles/typography.scss';
 import '../styles/global.scss';
 
 const IndexPage = () => {
-  const { projects } = useStaticQuery(graphql`
+  const { projects, writing } = useStaticQuery(graphql`
     query {
       projects: allContentfulProject(filter: {featured: {eq: true}}) {
         edges {
@@ -27,15 +27,28 @@ const IndexPage = () => {
           }
         }
       }
+      writing: allContentfulBlogPost(limit: 3, sort: {fields: publishedDate, order: DESC}) {
+        edges {
+          node {
+            title
+            publishedDate(formatString: "DD MMMM, YYYY")
+            contentful_id
+            slug
+            excerpt {
+              excerpt
+            }
+          }
+        }
+      }
     }
   `);
   
   return (
-    <Layout>
+    <Layout homePage={true}>
       <SEO title="Home" />
       <Splash />
       <ProjectSection projects={projects} />
-      <WritingSection />
+      <WritingSection writing={writing} />
     </Layout>
   );
 }

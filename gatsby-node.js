@@ -50,15 +50,15 @@ exports.createPages = ({ graphql, actions }) => {
     resolve(
       graphql(`
           query {
-            allContentfulBlogPost(sort: {fields: publishedDate, order: DESC}) {
+            allContentfulBlogPost {
               edges {
                 node {
                   title
                   publishedDate(formatString: "DD MMMM, YYYY")
                   contentful_id
                   slug
-                  body {
-                    body
+                  postBody {
+                    postBody
                   }
                 }
               }
@@ -70,12 +70,12 @@ exports.createPages = ({ graphql, actions }) => {
         }
         res.data.allContentfulBlogPost.edges.forEach(edge => {
         createPage({
-          path: `/blog/${edge.node.slug}`,
+          path: `/writing/${edge.node.slug}`,
           component: postTemplate,
           id: edge.node.contentful_id,
           context: {
             post: edge.node,
-            slug: `blog/${edge.node.slug}`
+            slug: `writing/${edge.node.slug}`
           }
         });
         });

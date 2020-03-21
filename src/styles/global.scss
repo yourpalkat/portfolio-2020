@@ -46,3 +46,11 @@ ol {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  min-height: calc(100vh - 7rem);
+}

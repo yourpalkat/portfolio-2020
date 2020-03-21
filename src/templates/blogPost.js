@@ -10,15 +10,15 @@ const ProjectTemplate = ({ pageContext }) => {
   const { post } = pageContext;
   return (
     <Layout>
-      <SEO title={`Project: ${post.title}`} />
+      <SEO title={`${post.title}`} />
       <section id="project-page">
         <div className="gridWrapper">
           <div className={PostStyles.contentBlock}>
             <h3>{post.title}</h3>
             <h4>{post.publishedDate}</h4>
-            {post.body && (
+            {post.postBody && (
               <ReactMarkdown
-                source={post.body.body}
+                source={post.postBody.postBody}
                 escapeHtml={false}
               />
             )}

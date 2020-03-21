@@ -5,7 +5,7 @@ import React from 'react';
 import Navigation from '../Navigation/Navigation';
 import headerStyles from './Header.module.scss';
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, homePage }) => (
   <header className={headerStyles.siteHeader}>
     <div className="gridWrapper">
       <h1 className={headerStyles.siteName}>
@@ -13,7 +13,7 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-      <Navigation />
+      <Navigation homePage={homePage} />
     </div>
   </header>
 );
