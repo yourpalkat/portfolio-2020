@@ -4,6 +4,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   return new Promise((resolve, reject) => {
     const projectTemplate = path.resolve('src/templates/singleProject.js');
+    const postTemplate = path.resolve('src/templates/blogPost.js');
 
     // Project pages
     resolve(
@@ -39,6 +40,42 @@ exports.createPages = ({ graphql, actions }) => {
           context: {
             project: edge.node,
             slug: `project/${edge.node.slug}`
+          }
+        });
+        });
+      })
+    );
+
+    // Blog posts
+    resolve(
+      graphql(`
+          query {
+            allContentfulBlogPost(sort: {fields: publishedDate, order: DESC}) {
+              edges {
+                node {
+                  title
+                  publishedDate(formatString: "DD MMMM, YYYY")
+                  contentful_id
+                  slug
+                  body {
+                    body
+                  }
+                }
+              }
+            }
+          }
+      `).then(res => {
+        if (res.errors) {
+          reject(res.errors);
+        }
+        res.data.allContentfulBlogPost.edges.forEach(edge => {
+        createPage({
+          path: `/blog/${edge.node.slug}`,
+          component: postTemplate,
+          id: edge.node.contentful_id,
+          context: {
+            post: edge.node,
+            slug: `blog/${edge.node.slug}`
           }
         });
         });

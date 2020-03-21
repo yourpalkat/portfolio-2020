@@ -5,7 +5,7 @@ import Layout from '../components/Layout/Layout';
 import SEO from '../components/seo';
 import Splash from '../components/Splash/Splash';
 import ProjectSection from '../components/ProjectSection/ProjectSection';
-import Writing from '../components/Writing/Writing';
+import WritingSection from '../components/WritingSection/WritingSection';
 
 import '../styles/normalize.scss';
 import '../styles/typography.scss';
@@ -35,7 +35,7 @@ const IndexPage = () => {
       <SEO title="Home" />
       <Splash />
       <ProjectSection projects={projects} />
-      <Writing />
+      <WritingSection />
     </Layout>
   );
 }

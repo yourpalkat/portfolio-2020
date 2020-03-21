@@ -1,0 +1,21 @@
+/* Blog post card module styles
+========================================================================== */
+
+.postCard {
+  margin-bottom: 4.8rem;
+}
+
+.postCard h4 {
+  margin-top: 0;
+}
+.postCard p a {
+  color: black;
+  font-family: $font-body-bold;
+  font-weight: 700;
+  text-decoration-color: rgba(0, 0, 0, 0.2);
+  transition: text-decoration-color 0.3s ease;
+}
+.postCard p a:hover,
+.postCard p a:focus {
+  text-decoration-color: rgba(0, 0, 0, 1);
+}
