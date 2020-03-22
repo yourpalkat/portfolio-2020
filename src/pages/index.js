@@ -24,6 +24,17 @@ const IndexPage = () => {
             }
             slug
             externalUrl
+            thumbnail {
+              description
+              fluid(maxWidth: 200, quality: 90) {
+                aspectRatio
+                sizes
+                src
+                srcSet
+                srcSetWebp
+                srcWebp
+              }
+            }
           }
         }
       }

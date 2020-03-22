@@ -19,7 +19,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className={FooterStyles.colophon}>
-          <p>Built in <a href="https://www.gatsbyjs.org/">Gatsby.</a> Hosted by <a href="https://www.netlify.com/">Netlify.</a> </p>
+          <p>Built with <a href="https://www.gatsbyjs.org/">Gatsby</a> and <a href="https://www.contentful.com/">Contentful</a>. Hosted by <a href="https://www.netlify.com/">Netlify.</a> </p>
           <p>Headline type treatments based on an example by <a href="https://rwt.io/">Jason Pamental.</a> Fonts: Ultra by Astigmatic, Roboto Sans by Christian Robertson, via Google.</p>
         </div>
         <div className={FooterStyles.copyright}>

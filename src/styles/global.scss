@@ -51,6 +51,6 @@ html {
   scroll-behavior: smooth;
 }
 
-section {
-  min-height: calc(100vh - 7rem);
+.pageSection {
+  min-height: 100vh;
 }

@@ -7,6 +7,12 @@
 
 .postCard h4 {
   margin-top: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid black;
+}
+.postCard h5 {
+  margin-bottom: 0;
+  color: #555;
 }
 .postCard p a {
   color: black;

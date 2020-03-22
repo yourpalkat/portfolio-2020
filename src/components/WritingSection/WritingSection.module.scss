@@ -1,5 +1,9 @@
 /* Index Page Writing module styles
 ========================================================================== */
+.writingSection {
+  padding-top: 8rem;
+  background-color: white;
+}
 
 .indexTitleBlock {
   grid-column: 2 / 6;
@@ -9,4 +13,20 @@
 .indexContentBlock {
   grid-column: 7 / -2;
   padding: 4rem 0;
+}
+
+.postCardSection {
+  margin-top: 3.6rem;
+}
+
+.indexContentBlock a {
+  color: black;
+  font-family: $font-body-bold;
+  font-weight: 700;
+  text-decoration-color: rgba(0, 0, 0, 0.3);
+  transition: text-decoration-color 0.3s ease;
+}
+.indexContentBlock a:hover,
+.indexContentBlock a:focus {
+  text-decoration-color: rgba(0, 0, 0, 1);
 }

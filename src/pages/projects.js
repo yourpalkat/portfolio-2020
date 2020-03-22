@@ -20,6 +20,17 @@ const IndexPage = () => {
             }
             slug
             externalUrl
+            thumbnail {
+              description
+                fluid(maxWidth: 200, quality: 90) {
+                aspectRatio
+                sizes
+                src
+                srcSet
+                srcSetWebp
+                srcWebp
+              }
+            }
           }
         }
       }
@@ -29,7 +40,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="All projects" />
-      <section id="all-projects">
+      <section id="all-projects" className="pageSection">
         <div className="gridWrapper">
           <div className={ProjectStyles.indexTitleBlock}>
             <FancyText text="projects archive" />

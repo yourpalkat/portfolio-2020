@@ -28,7 +28,7 @@ const WritingPage = () => {
   return (
     <Layout>
       <SEO title="All writing" />
-      <section id="all-writing">
+      <section id="all-writing" className="pageSection">
         <div className="gridWrapper">
           <div className={WritingStyles.indexTitleBlock}>
             <FancyText text="writing archive" />

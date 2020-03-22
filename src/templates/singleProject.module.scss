@@ -7,3 +7,34 @@
   grid-column: 7 / -2;
   padding: 4rem 0;
 }
+.contentBlock h3 {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid black;
+}
+.contentBlock a {
+  color: black;
+  text-decoration-color: rgba(0, 0, 0, 0.3);
+  transition: text-decoration-color 0.3s ease;
+}
+.contentBlock a:hover,
+.contentBlock a:focus {
+  text-decoration-color: rgba(0, 0, 0, 1);
+}
+
+.linkBlock {
+  display: flex;
+}
+.linkBlock > p {
+  margin-inline-end: 6rem;
+}
+.linkBlock a {
+  color: black;
+  font-family: $font-body-bold;
+  font-weight: 700;
+  text-decoration-color: rgba(0, 0, 0, 0.3);
+  transition: text-decoration-color 0.3s ease;
+}
+.linkBlock a:hover,
+.linkBlock a:focus {
+  text-decoration-color: rgba(0, 0, 0, 1);
+}

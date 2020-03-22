@@ -8,13 +8,13 @@ const PostCard = ({ post }) => {
   return (
     <div className={CardStyles.postCard}>
       <div className={CardStyles.postContent}>
-        <h4>{post.title}</h4>
         <h5>{post.publishedDate}</h5>
+        <h4>{post.title}</h4>
         <ReactMarkdown
           source={post.excerpt.excerpt}
           escapeHtml={false}
         />
-        <Link to={`/blog/${post.slug}`}>Read more...</Link>
+        <Link to={`/writing/${post.slug}`}>Read more...</Link>
       </div>
     </div>
   );

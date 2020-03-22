@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import Img from 'gatsby-image';
 import ReactMarkdown from 'react-markdown/with-html';
 
 import CardStyles from './ProjectCard.module.scss';
@@ -7,15 +8,16 @@ import CardStyles from './ProjectCard.module.scss';
 const ProjectCard = ({ project }) => {
   return (
     <div className={CardStyles.projectCard}>
-      <div className={CardStyles.thumbnail}></div>
+      <h4>{project.title}</h4>
+      <div className={CardStyles.thumbnail}>
+        <Img  fluid={project.thumbnail.fluid} alt={project.thumbnail.description} />
+      </div>
       <div className={CardStyles.projectContent}>
-        <h4>{project.title}</h4>
         <ReactMarkdown
           source={project.shortDescription.shortDescription}
           escapeHtml={false}
         />
         <Link to={`/project/${project.slug}`}>Read more...</Link>
-        {project.externalUrl && <p><a href={project.externalUrl}>See it here!</a></p> }
       </div>
     </div>
   );

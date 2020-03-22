@@ -15,14 +15,20 @@ const ProjectTemplate = ({ pageContext }) => {
         <div className="gridWrapper">
           <div className={ProjectStyles.contentBlock}>
             <h3>{project.title}</h3>
+            <div className={ProjectStyles.linkBlock}>
+              {project.externalUrl && <p><a href={project.externalUrl}>See it here!</a></p>}
+              {project.gitHubUrl && <p><a href={project.gitHubUrl}>GitHub repo</a></p>}
+            </div>
             {project.fullDescription && (
               <ReactMarkdown
                 source={project.fullDescription.fullDescription}
                 escapeHtml={false}
               />
             )}
-            {project.externalUrl && <p><a href={project.externalUrl}>See it here!</a></p>}
-            {project.gitHubUrl && <p><a href={project.gitHubUrl}>GitHub repo</a></p>}
+            <div className={ProjectStyles.linkBlock}>
+              {project.externalUrl && <p><a href={project.externalUrl}>See it here!</a></p>}
+              {project.gitHubUrl && <p><a href={project.gitHubUrl}>GitHub repo</a></p>}
+            </div>
           </div>
         </div>
       </section>

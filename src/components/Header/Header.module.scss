@@ -11,6 +11,7 @@
 }
 .siteName a {
   color: #000;
+  font-weight: 700;
   text-decoration-color: transparent;
   transition: text-decoration-color 0.3s ease;
 }
@@ -20,9 +21,10 @@
 }
 
 .siteHeader {
-  padding: 3rem 0 2rem;
+  height: 7rem;
+  padding-top: 3rem;
   background-color: white;
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 20;
 }
