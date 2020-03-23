@@ -35,3 +35,15 @@
 .projectContent p:first-of-type {
   margin-top: 0;
 }
+
+@media (max-width: 505px) {
+  .thumbnail {
+    grid-column: 1 / -1;
+    margin-bottom: 2.4rem;
+    margin-top: 0;
+    max-width: 200px;
+  }
+  .projectContent {
+    grid-column: 1 / -1;
+  }
+}

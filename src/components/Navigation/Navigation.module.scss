@@ -27,3 +27,16 @@
   color: black;
   text-decoration-color: black;
 }
+
+@media (max-width: 768px) {
+  .mainNav {
+    grid-column: 6 / -2;
+  }
+  .mainNav ul {
+    justify-content: flex-end;
+  }
+  .mainNav li {
+    margin-inline-end: 0;
+    margin-inline-start: 4rem;
+  }
+}

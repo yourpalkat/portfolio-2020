@@ -25,3 +25,30 @@
   padding: 0.25rem 0.5rem;
   border-left: 1px solid black;
 }
+
+@media (max-width: 768px) {
+  .splashSection {
+    padding-top: 2rem;
+  }
+
+  .indexTitleBlock {
+    grid-column: 2 / 10;
+    grid-row: 1 / 2;
+    opacity: 0.2;
+  }
+  .indexContentBlock {
+    grid-column: 4 / -2;
+    grid-row: 1 / 2;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 505px) {
+  .indexTitleBlock {
+    display: none;
+  }
+  .indexContentBlock {
+    grid-column: 2 / -2;
+    padding-top: 0;
+  }
+}
