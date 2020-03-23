@@ -42,7 +42,7 @@ const IndexPage = () => {
         edges {
           node {
             title
-            publishedDate(formatString: "DD MMMM, YYYY")
+            publishedDate(formatString: "D MMMM, YYYY")
             contentful_id
             slug
             excerpt {

@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown/with-html';
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/seo';
 
-import PostStyles from './singleProject.module.scss';
+import PostStyles from './blogPost.module.scss';
 
 const ProjectTemplate = ({ pageContext }) => {
   const { post } = pageContext;
@@ -14,8 +14,8 @@ const ProjectTemplate = ({ pageContext }) => {
       <section id="project-page">
         <div className="gridWrapper">
           <div className={PostStyles.contentBlock}>
-            <h3>{post.title}</h3>
-            <h4>{post.publishedDate}</h4>
+            <h2 className={PostStyles.title}>{post.title}</h2>
+            <h4 className={PostStyles.date}>{post.publishedDate}</h4>
             {post.postBody && (
               <ReactMarkdown
                 source={post.postBody.postBody}

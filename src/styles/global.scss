@@ -3,6 +3,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -26,7 +27,7 @@ ol {
   list-style: none;
 }
 
-.visually-hidden:not(:focus):not(:active) {
+.visuallyHidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -47,10 +48,13 @@ ol {
   margin: 0 auto;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 .pageSection {
   min-height: 100vh;
+}
+
+@media (max-width: 505px) {
+  .gridWrapper {
+    grid-template-columns: 4% repeat(6, 1fr), 4%;
+    grid-gap: 2rem;
+  }
 }

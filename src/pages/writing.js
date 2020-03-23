@@ -5,7 +5,7 @@ import PostCard from '../components/PostCard/PostCard';
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/seo';
 
-import WritingStyles from '../components/ProjectSection/ProjectSection.module.scss';
+import WritingStyles from '../components/WritingSection/WritingSection.module.scss';
 
 const WritingPage = () => {
   const { writing } = useStaticQuery(graphql`
@@ -14,6 +14,7 @@ const WritingPage = () => {
         edges {
           node {
             title
+            publishedDate(formatString: "D MMMM, YYYY")
             contentful_id
             excerpt {
               excerpt
@@ -34,8 +35,8 @@ const WritingPage = () => {
             <FancyText text="writing archive" />
           </div>
           <div className={WritingStyles.indexContentBlock}>
-            <h3>Writing</h3>
-            <p>I do not write as often as I should, but I am working to remedy that! Here are all the posts in the archive.</p>
+            <h3 className={WritingStyles.title}>Writing</h3>
+            <p>This is it, this is everything. Here are all the posts in the archive. Mostly I write to just try and figure things out for myself; if someone else gets something useful out of it, that's a wonderful bonus, but I generally don't consider myself an expert in anything enough to say Here is how a thing is done, etc. So, caveat lector and all that.</p>
             <div className={WritingStyles.projectCardSection}>
               {writing.edges.map(post => <PostCard post={post.node} key={post.node.contentful_id} />)}
             </div>

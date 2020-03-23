@@ -41,3 +41,8 @@
     margin-inline-start: 4rem;
   }
 }
+@media (max-width: 505px) {
+  .mainNav {
+    grid-column: 3 / -2;
+  }
+}

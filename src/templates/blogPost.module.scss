@@ -6,13 +6,116 @@
 .contentBlock {
   grid-column: 7 / -2;
   padding: 4rem 0;
+  overflow: hidden;
 }
 .contentBlock a {
-  color: black;
-  text-decoration-color: rgba(0, 0, 0, 0.3);
-  transition: text-decoration-color 0.3s ease;
+  color: $highlight;
+  text-decoration-color: $highlight;
+  transition: text-decoration-color 0.3s ease, color 0.3s ease;
 }
 .contentBlock a:hover,
 .contentBlock a:focus {
   text-decoration-color: rgba(0, 0, 0, 1);
+  color: rgba(0, 0, 0, 1);
+}
+
+.title {
+  font-family: $font-heading;
+  font-size: 6.2rem;
+  line-height: 0.9;
+  letter-spacing: -0.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid black;
+  margin: 4rem 0 2rem;
+  hyphens: auto;
+}
+.date {
+  color: #666;
+  font-size: 1.4rem;
+  letter-spacing: -0.05rem;
+}
+
+.contentBlock h3 {
+  font-family: $font-body-bold;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  letter-spacing: -0.025rem;
+  margin: 3.6rem 0 1.2rem;
+}
+.contentBlock blockquote {
+  position: relative;
+  margin: 2.4rem 4.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 2.4rem;
+  color: #444;
+}
+.contentBlock blockquote::before {
+  content: '“';
+  font-family: $font-heading;
+  color: $highlight;
+  opacity: 0.5;
+  font-size: 4.8rem;
+  position: absolute;
+  left: -4.8rem;
+  top: calc(50% - 1rem);
+}
+
+.contentBlock li {
+  margin-left: 1.6rem;
+  position: relative;
+  margin-bottom: 1.2rem;
+}
+.contentBlock ul li:last-of-type {
+  margin-bottom: 2.4rem;
+}
+.contentBlock li::before {
+  content: '•';
+  position: absolute;
+  color: $highlight;
+  font-size: 1.6rem;
+  left: -1.8rem;
+  top: 0.2rem;
+}
+
+.contentBlock pre {
+  width: 100%;
+  max-width: 600px;
+  overflow: scroll;
+  background-color: #444;
+  color: #fff;
+  padding: 2.4rem;
+  margin: 2.4rem 0;
+}
+
+@media (max-width: 768px) {
+  .contentBlock {
+    grid-column: 4 / -2;
+  }
+}
+
+@media (max-width: 505px) {
+  .contentBlock {
+    grid-column: 2 / -2;
+  }
+  .contentBlock h3 {
+    font-family: $font-body-bold;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    letter-spacing: -0.025rem;
+    margin: 3.6rem 0 1.2rem;
+  }
+}
+@media (max-width: 400px) {
+  .title {
+    font-family: $font-heading;
+    font-size: 5.6rem;
+  }
+}
+@media (max-width: 360px) {
+  .title {
+    font-family: $font-heading;
+    font-size: 4.8rem;
+  }
 }

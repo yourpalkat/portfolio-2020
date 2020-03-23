@@ -11,7 +11,7 @@ const Splash = () => {
           <FancyText text="front end web dev" />
         </div>
         <div className={SplashStyles.indexContentBlock}>
-          <h3>Well, hi.</h3>
+          <h3 className={SplashStyles.title}>Well, hi.</h3>
           <p>Hello from the west end of sunny Toronto, Canada, where craft brewers are starting to outnumber convenience stores. I’m Derek. </p>
           <p>I’m a front-end developer. I also have a little experience in back-end, some training in UX, and a ton of graphic design experience from a past life, but the front end is where my heart lies. I love building projects that people find useful, beautiful, and of course accessible. </p>
           <p>I’m also a mentor and part-time instructor, teaching intro to web development here in town. If you ever want to learn something really well, teach it to someone else. And if you ever want to relive the excitement and enthusiasm that first drew you to something? Teach it to someone else.</p>

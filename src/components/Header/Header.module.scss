@@ -9,14 +9,26 @@
   letter-spacing: -0.025rem;
   margin-top: 0;
 }
-.siteName a {
+.mobileSiteName {
+  grid-column: 2 / 3;
+  font-family: $font-body-regular;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  letter-spacing: -0.025rem;
+  margin-top: 0;
+  display: none;
+}
+.siteName a,
+.mobileSiteName a {
   color: #000;
   font-weight: 700;
   text-decoration-color: transparent;
   transition: text-decoration-color 0.3s ease, color 0.3s ease;
 }
 .siteName a:focus,
-.siteName a:hover {
+.siteName a:hover,
+.mobileSiteName a:focus,
+.mobileSiteName a:hover {
   color: $highlight;
   text-decoration-color: $highlight;
 }
@@ -28,4 +40,13 @@
   position: sticky;
   top: 0;
   z-index: 20;
+}
+
+@media (max-width: 505px) {
+  .mobileSiteName {
+    display: block;
+  }
+  .siteName {
+    display: none;
+  }
 }

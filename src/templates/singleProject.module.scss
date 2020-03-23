@@ -1,15 +1,24 @@
-.titleBlock {
-  grid-column: 2 / 6;
+  .projectPage {
+    padding-bottom: 6rem;
+  }
+
+.imageBlock {
+  grid-column: 2 / 7;
+  grid-row: 3 / 4;
   padding-top: 2rem;
+}
+.contentBlock,
+.projectTitle,
+.linkBlock {
+  grid-column: 7 / -2;
 }
 
 .contentBlock {
-  grid-column: 7 / -2;
-  padding: 4rem 0;
+  padding: 2rem 0;
+  grid-row: 3 / 4;
 }
-.contentBlock h3 {
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid black;
+.contentBlock > p:first-of-type {
+  margin-top: 0;
 }
 .contentBlock a {
   color: $highlight;
@@ -22,10 +31,23 @@
   text-decoration-color: rgba(0, 0, 0, 1);
 }
 
+.projectTitle {
+  font-family: $font-heading;
+  font-size: 6.2rem;
+  line-height: 0.9;
+  letter-spacing: -0.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid black;
+  margin: 4rem 0 2rem;
+}
+
 .linkBlock {
   display: flex;
 }
-.linkBlock > p {
+.linkBlock p {
+  margin: 0;
+}
+.linkBlock > p:first-of-type {
   margin-inline-end: 6rem;
 }
 .linkBlock a {
@@ -39,4 +61,45 @@
 .linkBlock a:focus {
   color: black;
   text-decoration-color: rgba(0, 0, 0, 1);
+}
+
+@media (max-width: 768px) { 
+  .contentBlock,
+  .projectTitle,
+  .linkBlock,
+  .imageBlock {
+    grid-column: 4 / -2;
+  }
+  .projectTitle {
+    grid-row: 1 / 2;
+  }
+  .imageBlock {
+    grid-row: 2 / 3;
+    padding-top: 0;
+  }
+  .contentBlock {
+    padding-top: 0;
+    grid-row: 4 / 5;
+  }
+}
+@media (max-width: 505px) { 
+  .contentBlock,
+  .projectTitle,
+  .linkBlock,
+  .imageBlock {
+    grid-column: 2 / -2;
+  }
+}
+
+@media (max-width: 400px) {
+  .projectTitle {
+    font-family: $font-heading;
+    font-size: 5.6rem;
+  }
+}
+@media (max-width: 360px) {
+  .projectTitle {
+    font-family: $font-heading;
+    font-size: 4.8rem;
+  }
 }

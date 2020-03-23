@@ -46,7 +46,7 @@ const IndexPage = () => {
             <FancyText text="projects archive" />
           </div>
           <div className={ProjectStyles.indexContentBlock}>
-            <h3>All projects</h3>
+            <h3 className={ProjectStyles.title}>All projects</h3>
             <p>Well, you asked for it. These are all the projects and experiments I have to show right now!</p>
             <div className={ProjectStyles.projectCardSection}>
               {projects.edges.map(project => <ProjectCard project={project.node} key={project.node.contentful_id} />)}
