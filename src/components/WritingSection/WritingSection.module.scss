@@ -20,14 +20,15 @@
 }
 
 .indexContentBlock a {
-  color: black;
+  color: $highlight;
   font-family: $font-body-bold;
   font-weight: 700;
-  text-decoration-color: rgba(0, 0, 0, 0.3);
-  transition: text-decoration-color 0.3s ease;
+  text-decoration-color: $highlight;
+  transition: text-decoration-color 0.3s ease, color 0.3s ease;
 }
 .indexContentBlock a:hover,
 .indexContentBlock a:focus {
+  color: black;
   text-decoration-color: rgba(0, 0, 0, 1);
 }
 

@@ -34,7 +34,7 @@ footer p {
 }
 .contact a:hover,
 .contact a:focus {
-  color: #fff;
+  color: $highlight;
 }
 .colophon,
 .copyright {
@@ -45,7 +45,7 @@ footer p {
 }
 .colophon a:hover,
 .colophon a:focus {
-  color: #fff;
+  color: $highlight;
 }
 .colophon p:last-of-type {
   margin-bottom: 0;

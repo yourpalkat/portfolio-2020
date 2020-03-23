@@ -13,11 +13,12 @@
   color: #000;
   font-weight: 700;
   text-decoration-color: transparent;
-  transition: text-decoration-color 0.3s ease;
+  transition: text-decoration-color 0.3s ease, color 0.3s ease;
 }
 .siteName a:focus,
 .siteName a:hover {
-  text-decoration-color: #000;
+  color: $highlight;
+  text-decoration-color: $highlight;
 }
 
 .siteHeader {
