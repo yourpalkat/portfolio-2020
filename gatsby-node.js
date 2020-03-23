@@ -24,6 +24,18 @@ exports.createPages = ({ graphql, actions }) => {
                   fullDescription {
                     fullDescription
                   }
+                  screenshots {
+                    description
+                    contentful_id
+                    fluid(quality: 90) {
+                      aspectRatio
+                      sizes
+                      src
+                      srcSet
+                      srcWebp
+                      srcSetWebp
+                    }
+                  }
                 }
               }
             }

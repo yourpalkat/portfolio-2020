@@ -15,7 +15,7 @@ const ProjectTemplate = ({ pageContext }) => {
       <section id="project-page" className={ProjectStyles.projectPage}>
         <div className="gridWrapper">
           <div className={ProjectStyles.imageBlock}>
-            <Carousel />
+            {project.screenshots && project.screenshots.length > 0 && <Carousel screenshots={project.screenshots} />}
           </div>
 
           <h3 className={ProjectStyles.projectTitle}>{project.title}</h3>

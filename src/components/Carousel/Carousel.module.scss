@@ -1,5 +1,35 @@
 .carousel {
-  background-color: #aaa;
   width: 100%;
-  min-height: 12rem;
+}
+
+.carouselButtons {
+  display: flex;
+  align-items: center;
+}
+.carouselButtons p {
+  justify-self: flex-end;
+  flex-grow: 1;
+  text-align: right;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #666;
+  margin: 1.2rem 0 2.4rem;
+  line-height: 1;
+}
+.arrowButton {
+  appearance: none;
+  color: $highlight;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 1.2rem 0;
+  margin-inline-end: 2.4rem;
+  font-size: 2.4rem;
+  transition: color 0.3s ease;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.arrowButton:hover,
+.arrowButton:focus {
+  color: black;
 }
