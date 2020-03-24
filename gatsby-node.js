@@ -27,7 +27,7 @@ exports.createPages = ({ graphql, actions }) => {
                   screenshots {
                     description
                     contentful_id
-                    fluid(quality: 90) {
+                    fluid(maxWidth: 500, quality: 90) {
                       aspectRatio
                       sizes
                       src

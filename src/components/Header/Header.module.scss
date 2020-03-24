@@ -3,7 +3,7 @@
 
 .siteName {
   grid-column: 2 / 6;
-  font-family: $font-body-regular;
+  font-family: $font-body-bold;
   font-size: 1.6rem;
   line-height: 2.4rem;
   letter-spacing: -0.025rem;
@@ -11,7 +11,7 @@
 }
 .mobileSiteName {
   grid-column: 2 / 3;
-  font-family: $font-body-regular;
+  font-family: $font-body-bold;
   font-size: 1.6rem;
   line-height: 2.4rem;
   letter-spacing: -0.025rem;
@@ -21,7 +21,6 @@
 .siteName a,
 .mobileSiteName a {
   color: #000;
-  font-weight: 700;
   text-decoration-color: transparent;
   transition: text-decoration-color 0.3s ease, color 0.3s ease;
 }
