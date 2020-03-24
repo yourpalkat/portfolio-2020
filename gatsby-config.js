@@ -8,13 +8,13 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `images`,
-    //     path: `${__dirname}/src/assets/images/`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `fonts`,
+        path: `${__dirname}/src/assets/fonts/`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -30,18 +30,6 @@ module.exports = {
           `,
         includePaths: ['./src/styles/']
       }
-    },
-    {
-      resolve: `gatsby-plugin-web-font-loader`,
-      options: {
-        google: {
-          families: [`Ultra`, `Roboto`, `Roboto bold`],
-        },
-        // custom: {
-        //   families: [`Ultra, Roboto`],
-        //   urls: [`/fonts/fonts.css`],
-        // },
-      },
     },
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
