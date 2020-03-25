@@ -35,8 +35,8 @@ const WritingPage = () => {
             <FancyText text="writing archive" />
           </div>
           <div className={WritingStyles.indexContentBlock}>
-            <h3 className={WritingStyles.title}>Writing</h3>
-            <p>This is it, this is everything. Here are all the posts in the archive. Mostly I write to just try and figure things out for myself; if someone else gets something useful out of it, that's a wonderful bonus, but I generally don't consider myself an expert in anything enough to say Here is how a thing is done, etc. So, caveat lector and all that.</p>
+            <h3 className="title">Writing</h3>
+            <p>This is it, this is everything. Here are all the posts in the archive. Mostly I write to just try and figure things out for myself; if someone else gets something useful out of it, that's a wonderful bonus, but I generally don't consider myself an expert in anything enough to say: Here, here is how a thing is done, etc. So, caveat lector and all that.</p>
             <div className={WritingStyles.projectCardSection}>
               {writing.edges.map(post => <PostCard post={post.node} key={post.node.contentful_id} />)}
             </div>

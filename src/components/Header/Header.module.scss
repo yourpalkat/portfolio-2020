@@ -11,7 +11,8 @@
 }
 .mobileSiteName {
   grid-column: 2 / 3;
-  font-family: $font-body-bold;
+  font-family: $font-heading;
+  text-transform: lowercase;
   font-size: 1.6rem;
   line-height: 2.4rem;
   letter-spacing: -0.025rem;
@@ -35,7 +36,8 @@
 .siteHeader {
   height: 7rem;
   padding-top: 3rem;
-  background-color: white;
+  background-color: $background;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 20;
