@@ -7,7 +7,7 @@ Design goals:
 1. Words over pictures
 2. Elegance over flash
 3. Friendly over fancy
-4. Make it fast, make it accessible
+4. Make it fast, accessible and extensible
 
 Work in progress! 
 
