@@ -12,7 +12,7 @@ const Footer = () => {
         <div className={FooterStyles.contact}>
           <p>Made in Toronto by Derek Murr.</p>
           <ul>
-            <li><a href="mailto:hello@derekmurr.com" title="Email"><IoIosMail /></a></li>
+            <li><a href="mailto:derekmurr@gmail.com" title="Email"><IoIosMail /></a></li>
             <li><a href="https://twitter.com/derekmurr" title="Twitter"><FaTwitterSquare /></a></li>
             <li><a href="https://www.linkedin.com/in/derek-murr-3449412/" title="LinkedIn"><FaLinkedin /></a></li>
             <li><a href="https://github.com/derekmurr" title="GitHub"><FaGithubSquare /></a></li>
