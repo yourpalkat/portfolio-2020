@@ -14,7 +14,7 @@ import '../styles/global.scss';
 const IndexPage = () => {
   const { projects, writing } = useStaticQuery(graphql`
     query {
-      projects: allContentfulProject(filter: {featured: {eq: true}}) {
+      projects: allContentfulProject(filter: {featured: {eq: true}}, sort: {fields: publishedDate, order: DESC}) {
         edges {
           node {
             title
