@@ -72,6 +72,9 @@ exports.createPages = ({ graphql, actions }) => {
                   postBody {
                     postBody
                   }
+                  excerpt {
+                    excerpt
+                  }
                 }
               }
             }
