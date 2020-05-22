@@ -11,7 +11,7 @@ const ProjectTemplate = ({ pageContext }) => {
   const { project } = pageContext;
   return (
     <Layout>
-      <SEO title={`Project: ${project.title}`} />
+      <SEO title={`Project: ${project.title}`} description={project.shortDescription.shortDescription} />
       <section id="project-page" className={ProjectStyles.projectPage}>
         <div className="gridWrapper">
           <div className={ProjectStyles.imageBlock}>
