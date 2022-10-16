@@ -10,11 +10,10 @@ const Footer = () => {
     <footer>
       <div className="gridWrapper">
         <div className={FooterStyles.contact}>
-          <p>Made in Toronto by Derek Murr.</p>
+          <p>Made in Toronto by Katharine Murr.</p>
           <ul>
-            <li><a href="mailto:derekmurr@gmail.com" title="Email"><IoIosMail /></a></li>
-            <li><a href="https://twitter.com/derekmurr" title="Twitter"><FaTwitterSquare /></a></li>
-            <li><a href="https://www.linkedin.com/in/derek-murr-3449412/" title="LinkedIn"><FaLinkedin /></a></li>
+            <li><a href="https://twitter.com/allofusflames" title="Twitter"><FaTwitterSquare /></a></li>
+            <li><a href="https://www.linkedin.com/in/katharine-murr/" title="LinkedIn"><FaLinkedin /></a></li>
             <li><a href="https://github.com/derekmurr" title="GitHub"><FaGithubSquare /></a></li>
           </ul>
         </div>

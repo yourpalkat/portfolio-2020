@@ -14,7 +14,7 @@ const Header = ({ siteTitle, homePage }) => (
         </Link>
       </h1>
       <h1 className={headerStyles.mobileSiteName}>
-        <Link to="/">DM</Link>
+        <Link to="/">KM</Link>
       </h1>
       <Navigation homePage={homePage} />
     </div>

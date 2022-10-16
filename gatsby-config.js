@@ -2,9 +2,9 @@ require("dotenv").config();
 
 module.exports = {
   siteMetadata: {
-    title: `Derek Murr`,
-    description: `Portfolio site and blog of Derek Murr, a front-end web developer based in Toronto, Canada.`,
-    author: `Derek Murr`,
+    title: `Katharine Murr`,
+    description: `Portfolio site and blog of Katharine Murr, a front-end web developer based in Toronto, Canada.`,
+    author: `Katharine Murr`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
